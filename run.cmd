@@ -1,0 +1,1 @@
+java -cp target/LifeBalanceOptimizer-0.0.1-SNAPSHOT.jar de.kluge.falkensee.LifeBalanceOptimizer.LifeBalanceOptimizerApplication
