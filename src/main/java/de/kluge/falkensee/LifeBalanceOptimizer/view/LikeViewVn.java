@@ -4,8 +4,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.vaadin.flow.component.button.Button;
+import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.Label;
-import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
+import com.vaadin.flow.component.notification.Notification;
+import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+import com.vaadin.flow.router.Route;
 
 import de.kluge.falkensee.LifeBalanceOptimizer.presenter.LikePresenter;
 import de.kluge.falkensee.LifeBalanceOptimizer.service.LikeService;
@@ -18,8 +21,10 @@ import de.kluge.falkensee.LifeBalanceOptimizer.service.LikeService;
  * 
  * LikeViewVn ist die Vaadin-Implementierung
  */
-@Component
-public class LikeViewVn extends CustomComponent implements LikeView {
+//@Component
+@Route("o")
+public class LikeViewVn extends VerticalLayout  //extends CustomComponent 
+implements LikeView {
 
 	private LikePresenter likePresenter;
 	private Label likeCountDisplay;
@@ -29,14 +34,20 @@ public class LikeViewVn extends CustomComponent implements LikeView {
 		this.likePresenter = new LikePresenter(this, likeService);
 		
 		likeCountDisplay = new Label("0");
-		Button add = new Button(FontAwesome.THUMBS_UP);
-		add.addClickListener(event -> likePresenter.addLike());
-		setCompositionRoot(new HorizontalLayout(likeCountDisplay, add));
+		Button button = new Button("FontAwesome.THUMBS_UP", event -> Notification.show("Clicked!"));
+		
+		
+		add(button);
+
 	}
 
 	@Override
 	public void displayLikeCount(int likeCount) {
-		likeCountDisplay.setValue(Integer.toString(likeCount));
+		likeCountDisplay.setText(Integer.toString(likeCount));
 	}
 
+	public void o() {
+		System.out.println("Ein Schelm");
+	}
+	
 }

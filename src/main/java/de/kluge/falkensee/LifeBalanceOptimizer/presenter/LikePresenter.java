@@ -1,5 +1,11 @@
 package de.kluge.falkensee.LifeBalanceOptimizer.presenter;
 
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.vaadin.flow.router.Route;
+
 import de.kluge.falkensee.LifeBalanceOptimizer.service.LikeService;
 import de.kluge.falkensee.LifeBalanceOptimizer.view.LikeView;
 
@@ -20,9 +26,14 @@ public class LikePresenter {
 		this.service = service;
 	}
 	
+//	@RequestMapping(value = "registration", method = RequestMethod.GET)
+//	@RequestMapping(value = "registration/add", method = RequestMethod.POST)
 	public void addLike() {
-		service.getLikeRepository(new Like());
+		System.out.println("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+		service.getLikeRepository();
 		view.displayLikeCount((int) service.getLikeRepository().count());
 	}
+	
+
 	
 }
