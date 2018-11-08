@@ -14,5 +14,6 @@ public class LikeService {
 	public LikeRepository getLikeRepository() {
 		return likeRepository;
 	}
-	
+
+
 }

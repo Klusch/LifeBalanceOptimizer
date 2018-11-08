@@ -1,5 +1,7 @@
 package de.kluge.falkensee.LifeBalanceOptimizer.presenter;
 
+import com.vaadin.flow.router.Route;
+
 import de.kluge.falkensee.LifeBalanceOptimizer.service.LikeService;
 import de.kluge.falkensee.LifeBalanceOptimizer.view.LikeView;
 
@@ -21,7 +23,8 @@ public class LikePresenter {
 	}
 	
 	public void addLike() {
-		service.getLikeRepository(new Like());
+		System.out.println("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+		service.getLikeRepository();
 		view.displayLikeCount((int) service.getLikeRepository().count());
 	}
 	
