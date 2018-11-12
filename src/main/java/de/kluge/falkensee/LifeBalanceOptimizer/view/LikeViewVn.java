@@ -46,4 +46,8 @@ implements LikeView {
 		likeCountDisplay.setText(Integer.toString(likeCount));
 	}
 
+	public void o() {
+		System.out.println("Ein Schelm");
+	}
+	
 }
