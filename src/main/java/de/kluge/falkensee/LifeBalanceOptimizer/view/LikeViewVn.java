@@ -1,10 +1,8 @@
 package de.kluge.falkensee.LifeBalanceOptimizer.view;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
 import com.vaadin.flow.component.button.Button;
-import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.Label;
 import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
@@ -26,6 +24,8 @@ import de.kluge.falkensee.LifeBalanceOptimizer.service.LikeService;
 public class LikeViewVn extends VerticalLayout  //extends CustomComponent 
 implements LikeView {
 
+	private static final long serialVersionUID = -7703649349582987526L;
+	
 	private LikePresenter likePresenter;
 	private Label likeCountDisplay;
 	

@@ -1,11 +1,5 @@
 package de.kluge.falkensee.LifeBalanceOptimizer.presenter;
 
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-
-import com.vaadin.flow.router.Route;
-
 import de.kluge.falkensee.LifeBalanceOptimizer.service.LikeService;
 import de.kluge.falkensee.LifeBalanceOptimizer.view.LikeView;
 
