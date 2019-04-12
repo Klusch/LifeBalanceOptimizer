@@ -1,0 +1,31 @@
+package de.kluge.falkensee.LifeBalanceOptimizer.model.repositories;
+
+import static org.assertj.core.api.Assertions.*;
+
+import java.util.List;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
+
+import de.kluge.falkensee.LifeBalanceOptimizer.LifeBalanceOptimizerApplication;
+import de.kluge.falkensee.LifeBalanceOptimizer.model.entities.UserEntity;
+
+@RunWith(SpringRunner.class)
+//@DataJpaTest
+@SpringBootTest(classes = LifeBalanceOptimizerApplication.class)
+public class UserRepositoryIntegrationTest {
+
+	@Autowired
+	private UserEntityRepository userRepository;
+
+	@Test
+	public void whenCalledSave_thenCorrectNumberOfUsers() {
+		userRepository.save(new UserEntity("Bob", "bob@domain.com"));
+		List<UserEntity> users = (List<UserEntity>) userRepository.findAll();
+
+		assertThat(users.size()).isEqualTo(1);
+	}
+}
