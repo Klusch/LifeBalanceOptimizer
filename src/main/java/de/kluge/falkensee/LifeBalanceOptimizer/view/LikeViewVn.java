@@ -5,6 +5,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import com.vaadin.annotations.Theme;
 import com.vaadin.flow.component.html.Label;
 import com.vaadin.flow.router.Route;
+import com.vaadin.flow.spring.annotation.SpringComponent;
+import com.vaadin.flow.spring.annotation.UIScope;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Notification;
 import com.vaadin.ui.VerticalLayout;
@@ -13,18 +15,19 @@ import de.kluge.falkensee.LifeBalanceOptimizer.presenter.LikePresenter;
 import de.kluge.falkensee.LifeBalanceOptimizer.service.LikeService;
 
 
-@Theme("mytheme")
-@Route
+@SpringComponent
+@UIScope
 public class LikeViewVn extends VerticalLayout implements LikeView {
 
 	private static final long serialVersionUID = -7703649349582987526L;
 	
+	@SuppressWarnings("unused")
 	private LikePresenter likePresenter;
 	private Label likeCountDisplay;
 	
 	@Autowired	
 	public LikeViewVn(LikeService likeService) {
-		this.likePresenter = new LikePresenter(this, likeService);
+		likePresenter = new LikePresenter(this, likeService);
 		
 		likeCountDisplay = new Label("0");
 		Button button = new Button("FontAwesome.THUMBS_UP", event -> Notification.show("Clicked!"));
