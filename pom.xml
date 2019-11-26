@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>de.kluge.falkensee</groupId>
     <artifactId>lifebalanceoptimizer</artifactId>
-    <name>LifeBalanceOptimizer</name>
+    <name>LifeBalanceoptimizer</name>
     <version>2.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
@@ -12,7 +12,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <vaadin.version>14.0.13</vaadin.version>
+        <vaadin.version>14.0.14</vaadin.version>
 
         <drivers.dir>${project.basedir}/drivers</drivers.dir>
         <drivers.downloader.phase>pre-integration-test</drivers.downloader.phase>
