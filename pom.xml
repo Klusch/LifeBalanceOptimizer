@@ -110,6 +110,20 @@
             <artifactId>vaadin-testbench</artifactId>
             <scope>test</scope>
         </dependency>
+<!-- https://mvnrepository.com/artifact/org.rapidpm/rapidpm-dependencies-core-logger -->
+<dependency>
+    <groupId>org.rapidpm</groupId>
+    <artifactId>rapidpm-dependencies-core-logger</artifactId>
+    <version>3.7.0</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.rapidpm/rapidpm-vaadin-addons-modules-framework -->
+<dependency>
+    <groupId>org.rapidpm</groupId>
+    <artifactId>rapidpm-vaadin-addons-modules-framework</artifactId>
+    <version>0.2.0</version>
+</dependency>
+
+        
     </dependencies>
 
     <build>
