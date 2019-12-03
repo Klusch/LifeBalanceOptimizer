@@ -28,6 +28,8 @@ public class MainView extends Composite<Div> {
 	    getContent().add(pageContent);
 		
 		Button button = new Button("Click me", e -> Notification.show(bean.getMessage()));
+		
+		
 //		add(button);
 	}
 
